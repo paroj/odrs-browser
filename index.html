@@ -83,6 +83,9 @@
             var title = document.createElement("h2")
             title.innerText = clean_appid(appid)
             document.getElementById("reviews").appendChild(title)
+            
+            // sort by date
+            data.sort((a, b) => b.date_created - a.date_created)
 
             for (var review of data) {
                 var card = document.createElement("div")
